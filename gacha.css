@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+
+#star{  
+    width: fit-content;
+    
+    background-color: #f5f4f4;
+    position: relative;
+    top: 200px;
+    margin-left: 40px;
+}
