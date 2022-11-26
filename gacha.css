@@ -5,6 +5,26 @@
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
+html{
+    background-image: url(./title.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text{
+    position: absolute;
+    left: 83vw;
+    border: 1px solid rgb(117, 117, 117);
+    top: 30px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .header p{
     font-weight: bold;
     position: relative;
@@ -25,7 +45,7 @@
 
 }
 .gachamoniter{
-
+    transform:translate3d(0,-1000px,0) ;
     top: 0px;
     height: 100vh;
     width: 100vw;
@@ -34,10 +54,12 @@
     text-align: center;
     font-weight: bold;
     color: rgb(51, 50, 50);
+    transition-duration: 0.5s;
+    z-index: 10;
 }
 .show{
-    
-    display: none;
+    transform: translate3d(0,0,0);
+
 }
 #star{  
 
@@ -50,17 +72,20 @@
 }
 
 .box{
+    
+    border: 3px solid rgb(136, 136, 136);
+    box-shadow: 4px 5px 4px rgb(91, 91, 91);
     position: relative;
     background-color: rgb(253, 253, 253);
     opacity: 0.6;
     width: 340px;
     height: 370px;
     top: 140px;
+    
 }
 
 .room{
     overflow-y: hidden;
-   z-index: 10;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -76,22 +101,30 @@
     top: 5px;
     position: absolute;
     z-index:15;
-    left: 93vw;
+    left: 91vw;
+    top: 15px;
     border: none;
     display: block;
-    width: 60px;
-    height: 100px;
+    width:80px;
 }
 .button img:hover{
     filter:opacity(0.4);
     transition-duration: 0.3s;
 }
 .getlang{
+    
     display: grid;
     grid-template-columns:100px 100px 100px  ; 
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
 }
-
+.room img{
+     height: 150px;
+    position: absolute;
+    width: 50vw;
+   
+    left: 25vw;
+    top: 30px;
+}
 .gachamoniter3{
     position: absolute;
     padding-top: 30px;
@@ -109,9 +142,9 @@
 }
 #gif{
     position: absolute;
-    width: 800px;
-    left: 330px;
-    top: 55px;
+    width: 600px;
+    left: 400px;
+    top: -15px;
     z-index: 9;
 }
 #gacha {
@@ -120,6 +153,19 @@
     padding-bottom: 20px;
     margin-top: 60px;
     margin-bottom: 50px;
+}
+.explain{
+    position: absolute;
+    left: 83vw;
+    border: 1px solid rgb(117, 117, 117);
+    top: 30px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 #gacha span{
     
@@ -138,12 +184,98 @@
     transition-duration: 0.3s;
 
 }
-#images{
-    width: 350px;
-    position: relative;
-    top: -350px;
-    left: 400px;
+#textman{
+    position: absolute;
+    font-size: 33px;
+    font-weight: bold;
+    width: 50vw;
+    left: 35vw;
+    top: 52px;
+    z-index: 1;
+
 }
+#images{
+   height: 500px;
+    width: 300px;
+    position: relative;
+    top: -530px;
+    left: 45vw;
+}
+.splashbg{
+    display: none;
+  content: "";
+  position:fixed;
+  transform: scale(100);
+  background-image: url(./title.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;/*伸びる背景色の設定*/
+  z-index: 999;
+    /*丸のスタートの形状*/
+    top:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+    left:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+  width: 2rem;
+  height: 2rem;
+}
+#splash{
+    position: absolute;
+    top: 13px;
+    background-image:url(./title.PNG);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    border-radius: 50%; 
+  animation-name:PageAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes PageAnime{
+  0% {/*丸のスタート位置と形状*/
+    transform: scale(100);
+  
+  }
+  100% {/*丸の終了位置と形状*/
+    transform: scale(0);
+    display: none;/*終了時は消える*/
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+  opacity: 0;/*はじめは透過0に*/
+}
+#splash h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:0s;
+  animation-delay: 0s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
 
 
 

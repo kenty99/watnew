@@ -1,4 +1,16 @@
 'usestrict'; 
+$(window).on('load',function(){
+    $("#splash-logo").delay(3000).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+  
+    //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+    $("#splash").delay(2500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+    
+        $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+  
+    });
+    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
+        
+});
 let language = []
 let lang1 = 0
 let lang2 = 0
@@ -177,16 +189,20 @@ else if (random == 19 && lang20 == 0){
   
 }
     if (language.length == 5){
-    document.getElementById("images").src = './gachagacha2.png'
+    document.getElementById("images").src = './biginer.png'
+    document.getElementById('textman').innerText ='初心者プログラマーの部屋'
 }
 else if(language.length ==10){
-    document.getElementById("images").src ='./lv3.png'
+    document.getElementById("images").src ='./chuken.png'
+    document.getElementById('textman').innerText ='中堅プログラマーの部屋'
 }
 else if(language.length == 15){
-    document.getElementById("images").src ='./kiz.png'
+    document.getElementById("images").src ='./pro.png'
+    document.getElementById('textman').innerText ='上級プログラマーの部屋'
 }
 else if (language.length == 20){
-    document.getElementById("images").src ='./one.png'
+    document.getElementById("images").src ='./engel2.png'
+    document.getElementById('textman').innerText ='天才プログラマーの部屋'
 }
 
 
@@ -199,9 +215,14 @@ else{
 
 let elementv= document.getElementById('gacha')
 elementv.addEventListener('click',gaccha)
+let num =0
 $('.button').on('click',() => {
-    $('.room').toggleClass('show')
+    num += 1
+    num %= 2
+    $('.gachamoniter').toggleClass('show')
+    document.getElementById('icon').src = `./${num}.png`
  });
+
 
     
 
@@ -210,11 +231,12 @@ $('.button').on('click',() => {
  
  let gif2 = document.getElementById('gif5')
  gif2.addEventListener('click',function(){
-    document.getElementById('gif').src = './gacah.gif'
-    setTimeout(()=>{document.getElementById('gif').src= ''},3300)
+    document.getElementById('gif').src = './giphy.gif'
+    setTimeout(()=>{document.getElementById('gif').src= ''},300)
     
  })
- clearTimeout(timer)
+
+
 
 
 
