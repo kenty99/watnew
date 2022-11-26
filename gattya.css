@@ -1,0 +1,53 @@
+
+
+.header{
+    display:flex;
+    width:100%;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Dela Gothic One', cursive;
+    width:90%;
+}
+
+.h1{
+    font-size:60px;
+    width:100%;
+    text-align: center;
+}
+
+.gattya {
+    width:10%;
+}
+
+.gattya img{
+    width:50%;
+}
+
+.gattya p{
+    padding-top:5px;
+    width:100%;
+}
+
+.body{
+    display:flex;
+}
+
+.grow img{
+    width:100%;
+}
+
+.supa{
+    width:33%;
+}
+
+.name p{
+    text-align:center;
+    padding:20px 0;
+}
+
+.language{
+    text-align:center;
+    padding:20px 0;
+}
