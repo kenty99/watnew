@@ -177,16 +177,16 @@ else if (random == 19 && lang20 == 0){
   
 }
     if (language.length == 5){
-    document.getElementById("images").src = '../watnew/gachagacha2.png'
+    document.getElementById("images").src = './gachagacha2.png'
 }
 else if(language.length ==10){
-    document.getElementById("images").src ='../watnew/lv3.png'
+    document.getElementById("images").src ='./lv3.png'
 }
 else if(language.length == 15){
-    document.getElementById("images").src ='../watnew/kiz.png'
+    document.getElementById("images").src ='./kiz.png'
 }
 else if (language.length == 20){
-    document.getElementById("images").src ='../watnew/one.png'
+    document.getElementById("images").src ='./one.png'
 }
 
 
