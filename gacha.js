@@ -1,4 +1,16 @@
 'usestrict'; 
+$(window).on('load',function(){
+    $("#splash-logo").delay(3000).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+  
+    //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+    $("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+    
+        $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+  
+    });
+    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
+        
+});
 let language = []
 let lang1 = 0
 let lang2 = 0
@@ -200,7 +212,7 @@ else{
 let elementv= document.getElementById('gacha')
 elementv.addEventListener('click',gaccha)
 $('.button').on('click',() => {
-    $('.room').toggleClass('show')
+    $('.gachamoniter').toggleClass('show')
  });
 
     
@@ -214,7 +226,8 @@ $('.button').on('click',() => {
     setTimeout(()=>{document.getElementById('gif').src= ''},3300)
     
  })
- clearTimeout(timer)
+
+
 
 
 

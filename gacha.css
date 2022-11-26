@@ -5,6 +5,10 @@
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
+html{
+    background-color: rgb(183, 180, 180);
+}
+
 .header p{
     font-weight: bold;
     position: relative;
@@ -25,7 +29,7 @@
 
 }
 .gachamoniter{
-
+    transform:translate3d(0,-1000px,0) ;
     top: 0px;
     height: 100vh;
     width: 100vw;
@@ -34,10 +38,13 @@
     text-align: center;
     font-weight: bold;
     color: rgb(51, 50, 50);
+    transition-duration: 0.5s;
+    z-index: 10;
 }
 .show{
+    transform: translate3d(0,0,0);
     
-    display: none;
+   
 }
 #star{  
 
@@ -50,17 +57,20 @@
 }
 
 .box{
+    
+    border: 3px solid rgb(136, 136, 136);
+    box-shadow: 4px 5px 4px rgb(91, 91, 91);
     position: relative;
     background-color: rgb(253, 253, 253);
     opacity: 0.6;
     width: 340px;
     height: 370px;
     top: 140px;
+    
 }
 
 .room{
     overflow-y: hidden;
-   z-index: 10;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -77,6 +87,7 @@
     position: absolute;
     z-index:15;
     left: 93vw;
+    top: 15px;
     border: none;
     display: block;
     width: 60px;
@@ -87,6 +98,7 @@
     transition-duration: 0.3s;
 }
 .getlang{
+    
     display: grid;
     grid-template-columns:100px 100px 100px  ; 
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
@@ -144,6 +156,75 @@
     top: -350px;
     left: 400px;
 }
+.splashbg{
+    display: none;
+  content: "";
+  position:fixed;
+  transform: scale(100);
+  background-color: rgb(183, 180, 180);/*伸びる背景色の設定*/
+  z-index: 999;
+    /*丸のスタートの形状*/
+    top:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+    left:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+  width: 2rem;
+  height: 2rem;
+}
+#splash{
+    position: absolute;
+    top: -20px;
+    background-color: rgb(183, 180, 180);
+    height: 100vh;
+    width: 100vw;
+
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    border-radius: 50%; 
+  animation-name:PageAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes PageAnime{
+  0% {/*丸のスタート位置と形状*/
+    transform: scale(100);
+  
+  }
+  100% {/*丸の終了位置と形状*/
+    transform: scale(0);
+    display: none;/*終了時は消える*/
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+  opacity: 0;/*はじめは透過0に*/
+}
+#splash h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:0s;
+  animation-delay: 0s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
 
 
 
