@@ -222,7 +222,7 @@ $('.button').on('click',() => {
  
  let gif2 = document.getElementById('gif5')
  gif2.addEventListener('click',function(){
-    document.getElementById('gif').src = '../watnew/gacah.gif'
+    document.getElementById('gif').src = './gacah.gif'
     setTimeout(()=>{document.getElementById('gif').src= ''},3300)
     
  })

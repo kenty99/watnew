@@ -4,15 +4,109 @@
     align-items: center;
 }
 
-.title{
-    font-family: 'Dela Gothic One', cursive;
-    width:90%;
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+div.foo{
+  position: absolute;
+  width: 100%;
+  bottom: 3em;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter{
+  display: inline-block;
+  font-weight: 100;
+  font-size: 2.5em;
+  margin: 0.2em;
+  position: relative;
+  color: #00B4F1;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #000;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
 }
 
-.h1{
-    font-size:60px;
+
+
+
+
+
+
+
+
+
+.ribbon{
+    position: relative;
+    margin: auto;
+    width: 90%;
+}
+
+.ribbon img{
     width:100%;
-    text-align: center;
+}
+
+.ribbon p{
+    font-family: 'Dela Gothic One', cursive;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:0;
+    margin:0;
+    font-size:35px;
 }
 
 .gattya {
@@ -20,7 +114,7 @@
 }
 
 .gattya img{
-    width:50%;
+    width:80%;
 }
 
 .gattya p{
