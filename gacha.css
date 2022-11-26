@@ -43,13 +43,18 @@
     display: none;
 }
 #star{  
+
     width: fit-content;
     top: 60px;
-    background-color: azure;
+    font-weight: bold;
     position: relative;
-    
+    padding:20px 20px 20px 20px ;
    
 }
+#star span{
+color: aliceblue;
+}
+
 .room{
     margin-left: auto;
     margin-right: auto;
@@ -76,6 +81,10 @@
 .button img:hover{
     filter:opacity(0.4);
     transition-duration: 0.3s;
+}
+.getlang{
+    display: grid;
+    grid-template-columns:70px 70px 70px 70px ;
 }
 
 
