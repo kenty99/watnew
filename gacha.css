@@ -1,6 +1,15 @@
 @charset "utf-8";
-
-
+.gchamoniter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.show{
+    
+     position: relative;
+     
+    display: none;
+}
 #star{  
     width: fit-content;
     

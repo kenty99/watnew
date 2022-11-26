@@ -38,7 +38,10 @@ else if (random == 6){
     document.getElementById('star7').innerText = "★"
 }
 
-
+const cllik = document.getElementById('button')
 };
 let elementv= document.getElementById('gacha')
-addEventListener('click',gaccha)
+elementv.addEventListener('click',gaccha)
+$('.button').on('click',() => {
+    $('.gachamoniter').toggleClass('show')
+ });
