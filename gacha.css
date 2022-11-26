@@ -5,15 +5,6 @@
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
-.header{
-    text-align: center;
-    font-size: 40px;
-    position: relative;
-    top: -25px;
-    width: 100vw;
-    height: 120px;
-    background-color: azure;
-}
 .header p{
     font-weight: bold;
     position: relative;
@@ -27,12 +18,19 @@
     font-size: 30px;
 
 }
+.gachamoniter2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+}
 .gachamoniter{
+
     top: 0px;
     height: 100vh;
     width: 100vw;
     background-color: antiquewhite;
-    z-index: 10;
+   
      position: absolute;
     text-align: center;
     font-weight: bold;
@@ -45,17 +43,25 @@
 #star{  
 
     width: fit-content;
-    top: 60px;
     font-weight: bold;
     position: relative;
+    top: -240px;
     padding:20px 20px 20px 20px ;
    
 }
-#star span{
-color: aliceblue;
+
+.box{
+    position: relative;
+    background-color: rgb(253, 253, 253);
+    opacity: 0.6;
+    width: 340px;
+    height: 370px;
+    top: 140px;
 }
 
 .room{
+    overflow-y: hidden;
+    z-index: 10;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -70,13 +76,12 @@ color: aliceblue;
 .button img{
     top: 5px;
     position: absolute;
-    z-index:11;
+    z-index:15;
     left: 93vw;
     border: none;
     display: block;
     width: 60px;
     height: 100px;
-   
 }
 .button img:hover{
     filter:opacity(0.4);
@@ -84,7 +89,54 @@ color: aliceblue;
 }
 .getlang{
     display: grid;
-    grid-template-columns:70px 70px 70px 70px ;
+    grid-template-columns:100px 100px 100px  ; 
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+}
+
+.gachamoniter3{
+    position: absolute;
+    padding-top: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30rem;
+    height: 20rem;
+     border: 2px solid black;
+     border-radius: 15px;
+    
+
+}
+#gacha {
+   
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+#gacha span{
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(241, 241, 128);
+    border-radius: 24px;
+    border: 3px solid;
+    box-shadow: 2px 5px 2px rgb(110, 109, 109);
+
+}
+#gacha span:hover{
+    opacity: 0.6;
+    transition-duration: 0.3s;
+
+}
+#images{
+    width: 350px;
+    position: relative;
+    top: -350px;
+    left: 400px;
 }
 
 

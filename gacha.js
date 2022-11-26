@@ -25,12 +25,13 @@ let n = 0
 
 
 
-const lang = ["Java","Javascript","C言語","PHP","Ruby","Perl","Swift","C++","C#","SQL","VBA","Scala","Lua","COBOl","Object-C","Kotolin","R","TypeScript","Go","Visual Basic"]
+const lang = ["Java","C言語","JavaScript","PHP","Ruby","Perl","Swift","C++","C#","SQL","VBA","Scala","Lua","COBOl","Object-C","Kotolin","R","TypeScript","Go","Flutter"]
 let gaccha = ()=>{
+
 if (language.length != 20){
  var random = Math.floor(Math.random()*50)
  
- if (random <= 20){
+ if (random <= 19){
   
     document.getElementById('list').innerText = `${lang[random]}を習得した！`
     
@@ -176,19 +177,31 @@ else if (random == 19 && lang20 == 0){
     
   
 }
-
+    if (language.length == 5){
+    document.getElementById("images").src = '../watnew/gachagacha2.png'
+}
+else if(language.length ==10){
+    document.getElementById("images").src ='../watnew/lv3.png'
+}
+else if(language.length == 15){
+    document.getElementById("images").src ='../watnew/kiz.png'
+}
+else if (language.length == 20){
+    document.getElementById("images").src ='../watnew/one.png'
+}
 
 
 }
 else{
-    document.getElementById('list').innerText = "おめでとう全習得！！"
+    document.getElementById('list').innerText = "おめでとう！全部習得できた！"
 }
+
 }
 
 let elementv= document.getElementById('gacha')
 elementv.addEventListener('click',gaccha)
 $('.button').on('click',() => {
-    $('.gachamoniter').toggleClass('show')
+    $('.room').toggleClass('show')
  });
 
 
