@@ -30,7 +30,6 @@
     height: 100vh;
     width: 100vw;
     background-color: antiquewhite;
-   
      position: absolute;
     text-align: center;
     font-weight: bold;
@@ -61,7 +60,7 @@
 
 .room{
     overflow-y: hidden;
-    z-index: 10;
+   z-index: 10;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -107,6 +106,13 @@
      border-radius: 15px;
     
 
+}
+#gif{
+    position: absolute;
+    width: 800px;
+    left: 330px;
+    top: 55px;
+    z-index: 9;
 }
 #gacha {
    

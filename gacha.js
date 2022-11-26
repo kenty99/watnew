@@ -24,12 +24,11 @@ let lang20 = 0
 let n = 0
 
 
-
 const lang = ["Java","C言語","JavaScript","PHP","Ruby","Perl","Swift","C++","C#","SQL","VBA","Scala","Lua","COBOl","Object-C","Kotolin","R","TypeScript","Go","Flutter"]
 let gaccha = ()=>{
 
 if (language.length != 20){
- var random = Math.floor(Math.random()*50)
+ var random = Math.floor(Math.random()*40)
  
  if (random <= 19){
   
@@ -37,7 +36,7 @@ if (language.length != 20){
     
     }
 else{
-    document.getElementById('list').innerText = "何も習得することができなかった..."
+    document.getElementById('list').innerText = "習得できず..."
     }
 
 
@@ -203,6 +202,19 @@ elementv.addEventListener('click',gaccha)
 $('.button').on('click',() => {
     $('.room').toggleClass('show')
  });
+
+    
+
+ 
+
+ 
+ let gif2 = document.getElementById('gif5')
+ gif2.addEventListener('click',function(){
+    document.getElementById('gif').src = '../watnew/gacah.gif'
+    setTimeout(()=>{document.getElementById('gif').src= ''},3300)
+    
+ })
+ clearTimeout(timer)
 
 
 
