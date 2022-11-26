@@ -4,16 +4,15 @@
     display:flex;
     width:100%;
     align-items: center;
-
 }
 
 .title{
-    font-family: "Nikukyu";
+    font-family: 'Dela Gothic One', cursive;
     width:90%;
 }
 
 .h1{
-    font-size:70px;
+    font-size:60px;
     width:100%;
     text-align: center;
 }
@@ -23,7 +22,7 @@
 }
 
 .gattya img{
-    width:70%;
+    width:50%;
 }
 
 .gattya p{
@@ -32,9 +31,23 @@
 }
 
 .body{
-    
+    display:flex;
 }
 
-.body img{
-    width:50%;
+.grow img{
+    width:100%;
+}
+
+.supa{
+    width:33%;
+}
+
+.name p{
+    text-align:center;
+    padding:20px 0;
+}
+
+.language{
+    text-align:center;
+    padding:20px 0;
 }
