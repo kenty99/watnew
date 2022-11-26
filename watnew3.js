@@ -4,7 +4,7 @@ var a = 0;
 console.log("テメェは初心者です");
 
 for(var i = 0; i <= 30; i++){
-    var gengo = readline. question("使用言語を書け");
+    var gengo = readline. question("使用言語を書け:");
     
     if(gengo !== ""){
         ++a;
