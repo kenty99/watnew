@@ -1,0 +1,40 @@
+
+
+.header{
+    display:flex;
+    width:100%;
+    align-items: center;
+
+}
+
+.title{
+    font-family: "Nikukyu";
+    width:90%;
+}
+
+.h1{
+    font-size:70px;
+    width:100%;
+    text-align: center;
+}
+
+.gattya {
+    width:10%;
+}
+
+.gattya img{
+    width:70%;
+}
+
+.gattya p{
+    padding-top:5px;
+    width:100%;
+}
+
+.body{
+    
+}
+
+.body img{
+    width:50%;
+}
