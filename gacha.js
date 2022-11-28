@@ -40,7 +40,7 @@ const lang = ["Java","C言語","JavaScript","PHP","Ruby","Perl","Swift","C++","C
 let gaccha = ()=>{
 
 if (language.length != 20){
- var random = Math.floor(Math.random()*40)
+ var random = Math.floor(Math.random()*23)
  
  if (random <= 19){
   
@@ -232,7 +232,7 @@ $('.button').on('click',() => {
  let gif2 = document.getElementById('gif5')
  gif2.addEventListener('click',function(){
     document.getElementById('gif').src = './giphy.gif'
-    setTimeout(()=>{document.getElementById('gif').src= ''},2300)
+    setTimeout(()=>{document.getElementById('gif').src= ''},1300)
     
  })
 
