@@ -286,6 +286,88 @@ body.appear #container{
 }
 }
 
+.tiping{
+    position: absolute;
+    transform:translate3d(-1900px,0,0);
+      transition-duration: 0.5s;
+    
+      width: 100vw;
+      height: 100vh;
+}
+.isshow{position: absolute;
+    transform: translate3d(0,0,0);
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+
+}
+#botan{
+    position: absolute;
+    z-index: 1001;
+    height: 100px;
+    left: 90vw;
+    top: 90vh;
+
+}
 
 
+
+.container{
+    position: absolute; 
+    z-index: 100;
+      width: 100%;
+      top: 0;
+    left: 0;
+    height: 100%;
+    background-color: aqua;
+    font-size:2.4rem;
+    font-weight:600;
+   
+    border-radius: 0.5rem;
+  
+   
+}
+
+.container .type-Input{
+    position: absolute;
+    margin-top:4rem;
+    font-size:3rem;
+    z-index: 100;
+}
+
+.timer{
+    position: absolute;
+    top: 2rem;
+    z-index: 11;
+    font-size:5rem;
+    font-weight:bold;
+    color:red;
+    z-index: 10000;
+}
+
+.type-display{
+    margin-bottom:1rem;
+    margin-left:1rem;
+}
+
+.type-Input{
+    background: transparent;
+    border:2px solid red;
+    outline:none;
+    width:100%;
+    height:14rem;
+    margin:auto;
+    resize:none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size:1rem;
+}
+
+.correct{
+    color:green;
+}
+
+.incorrect{
+    color:red;
+}
 
