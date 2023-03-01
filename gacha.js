@@ -17,6 +17,13 @@ $(window).on('load',function(){
 });
         
 });
+
+
+/*カウント定義 */
+var count_disp = document.getElementById("disp_count");  
+var count_value = 0;
+
+
 let language = []
 let lang1 = 0
 let lang2 = 0
@@ -47,7 +54,18 @@ let gaccha = ()=>{
 
 if (language.length != 20){
  var random = Math.floor(Math.random()*23)
+
+
+if(count_value<5){
+    window.alert('ポイントが足りません！');
+    return false;
+}
+
+ /*5ptで1回転 */
+ count_value -= 5;
+ count_disp.innerHTML = count_value;
  
+
  if (random <= 19){
     document.getElementById('list').innerText = `${lang[random]}を習得した！`
     
@@ -254,6 +272,7 @@ $('.button').on('click',() => {
   const timer = document.getElementById("timer");
   
   
+  
   /*生誤判定*/
   typeInput.addEventListener("input", () => {
       const sentenceArray = typeDisplay.querySelectorAll("span");
@@ -278,7 +297,9 @@ $('.button').on('click',() => {
       });
   
       if(correct == true){
-          RenderNextSentence();
+        count_value += 1;
+        count_disp.innerHTML = count_value;
+        RenderNextSentence();
       }
   }); 
   
@@ -321,7 +342,7 @@ $('.button').on('click',() => {
       RenderNextSentence();
   }
   
-  RenderNextSentence();
+  
 
 
 
